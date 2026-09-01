@@ -1,0 +1,220 @@
+/* General Page Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: #222;
+    background-color: #fff;
+}
+
+/* Header */
+
+header {
+    background-color: #20577d;
+    color: white;
+}
+
+#course-title {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: "Montserrat", sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Main */
+
+main {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 0 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+}
+
+/* Cards */
+
+.card {
+    border: 1px solid #bbb;
+    border-radius: 7px;
+    overflow: hidden;
+    min-height: 380px;
+}
+
+.card h2 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #20577d;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+}
+
+.card p {
+    line-height: 1.7;
+    font-size: 0.9rem;
+}
+
+/* About Me */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: 15px;
+    padding: 10px 15px;
+}
+
+.about-content img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3 {
+    text-align: center;
+    margin: 5px 40px 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #bbb;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 10px;
+    padding: 0 15px;
+}
+
+.location-content figure {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.location-content img {
+    width: 130px;
+    height: 85px;
+    object-fit: cover;
+    border: 1px solid #bbb;
+}
+
+.location-content figcaption {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+/* Resources */
+
+.card ul {
+    margin-top: 100px;
+    padding-left: 35px;
+}
+
+.card li {
+    margin: 7px 0;
+}
+
+.card a {
+    color: #0000ee;
+}
+
+.card a:hover {
+    color: #cc0000;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 15px;
+    padding: 12px;
+    text-align: center;
+    background-color: #20577d;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+footer p {
+    margin: 3px;
+}
+
+#lastModified {
+    color: #ffff00;
+    font-size: 0.8rem;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 700px) {
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content img {
+        margin: auto;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .location-content figure {
+        margin: auto;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}

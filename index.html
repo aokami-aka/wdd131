@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD 131 – Dynamic Web Fundamentals – Victor Santos</title>
+
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals. Victor Santos's home page featuring web development resources, personal information, and information about Paraíba.">
+
+    <meta name="author" content="Victor Santos">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+
+        <nav>
+            <a href="https://www.linkedin.com/in/victor-santos-967b633b7" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Victor Santos</h1>
+
+        <div class="card-grid">
+
+            <section class="card">
+                <h2>About Me</h2>
+
+                <div class="about-content">
+                    <div>
+                        <p>
+                            My name is Victor Santos. I was born in Brazil
+                            and live with my family in Paraíba, Brazil. I am currently working
+                            as an Software Developer at a federal state-owned information technology company. My
+                            parents are my world and I love spending time with them.
+                            I love to play games and I love to learn new things.
+                        </p>
+                    </div>
+
+                    <img src="images/profile.jpg"
+                        alt="Portrait of Victor Santos"
+                        width="150"
+                        height="150">
+                </div>
+
+                <h3>Paraíba, Brazil</h3>
+
+                <div class="location-content">
+                    <figure>
+                        <img src="images/state.webp"
+                            alt="Official flag of Paraíba, Brazil"
+                            width="130"
+                            height="85">
+                        <figcaption>Official Flag of Paraíba, Brazil</figcaption>
+                    </figure>
+
+                    <p>
+                        Paraíba is a state in the northeastern region of Brazil. It is known for its beautiful beaches, rich culture, and historical significance. The state is home to various natural attractions and vibrant cities.
+                    </p>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+
+                <ul>
+                    <li>
+                        <a href="https://dev.to/" target="_blank">Dev.to Community</a>
+                    </li>
+                    <li>
+                        <a href="https://css-tricks.com/" target="_blank">CSS Tricks</a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
+                    </li>
+                    <li>
+                        <a href="https://www.udemy.com/" target="_blank">Udemy</a>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span>
+            Victor Santos | Paraíba, Brazil
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
