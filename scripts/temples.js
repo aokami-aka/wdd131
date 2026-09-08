@@ -1,6 +1,6 @@
 // Responsive Hamburger Menu Toggle
 const hamButton = document.querySelector("#menu");
-const navigation = document.querySelector(".navigation");
+const navigation = document.querySelector("nav");
 
 if (hamButton && navigation) {
     hamButton.addEventListener("click", () => {
