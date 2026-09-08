@@ -1,0 +1,54 @@
+@media (min-width: 650px) {
+
+    /* Header & Navigation */
+    header {
+        flex-wrap: nowrap;
+        padding: 0.8rem 2rem;
+    }
+
+    #menu {
+        display: none;
+        /* Hamburger button hidden on larger screens */
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: auto;
+        margin-top: 0;
+        gap: 0.75rem;
+    }
+
+    .navigation a {
+        display: inline-block;
+        width: auto;
+        border-top: none;
+        padding: 0.5rem 0.9rem;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    .navigation a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: var(--accent-color);
+    }
+
+    /* Main Content Grid */
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+    }
+
+    h1 {
+        grid-column: 1 / -1;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    figure {
+        max-width: none;
+    }
+}
