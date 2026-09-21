@@ -1,0 +1,74 @@
+@media (min-width: 650px) {
+
+    /* Header & Navigation */
+    header {
+        flex-wrap: nowrap;
+        padding: 0.8rem 2rem;
+    }
+
+    #menu {
+        display: none;
+        /* Hamburger button hidden on larger screens */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: auto;
+        margin-top: 0;
+        gap: 0.75rem;
+    }
+
+    nav a {
+        display: inline-block;
+        width: auto;
+        border-top: none;
+        padding: 0.5rem 0.9rem;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: var(--accent-color);
+    }
+
+    /* Main Content Grid */
+    main {
+        padding: 0 1.5rem;
+    }
+
+    h1 {
+        grid-column: 1 / -1;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Dynamically generated temple cards */
+.temple-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.temple-grid figcaption {
+    padding: 0.75rem;
+    font-family: var(--font-body);
+    color: var(--text-dark);
+}
+
+.temple-grid figcaption h2 {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.temple-grid figcaption p {
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+}
