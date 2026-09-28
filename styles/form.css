@@ -1,0 +1,271 @@
+/* Product Review Form */
+
+:root {
+  --primary: #4b164c;
+  --primary-dark: #351035;
+  --background: #f7f4f7;
+  --card: #ffffff;
+  --text: #171217;
+  --muted: #666066;
+  --border: #c8c2c8;
+  --focus: #1769aa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.5;
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+main {
+  width: min(92%, 850px);
+  margin: 2rem auto;
+}
+
+form,
+.confirmation {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+}
+
+label,
+legend {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+legend {
+  padding: 0;
+  margin-bottom: 0.75rem;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 1.75rem;
+  min-width: 0;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  color: var(--text);
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid rgba(23, 105, 170, 0.25);
+  border-color: var(--focus);
+}
+
+.rating-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.rating-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-option input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.rating-option label {
+  display: inline-flex;
+  cursor: pointer;
+  padding: 0.3rem 0.4rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.rating-option label:hover {
+  background: #eee7ee;
+  transform: scale(1.05);
+}
+
+.rating-option input:focus-visible + label {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.rating-option .star {
+  color: #b9b4b9;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  line-height: 1;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Selected rating */
+.rating-option input:checked + label .star {
+  color: #ffc107;
+}
+
+/* Hover preview */
+.rating-option label:hover .star {
+  color: #ffc107;
+}
+
+.checkbox-group {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkbox-group input {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--primary);
+}
+
+.hint,
+.optional {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+input[type="submit"] {
+  width: 100%;
+  border: 0;
+  border-radius: 7px;
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: var(--primary-dark);
+}
+
+input[type="submit"]:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.confirmation {
+  text-align: center;
+}
+
+.confirmation h2 {
+  color: var(--primary);
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+}
+
+.review-count {
+  margin: 2rem auto;
+  padding: 1.25rem;
+  background: #f0e9f0;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+#reviewCount {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.back-link:hover {
+  background: var(--primary-dark);
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin: 0.25rem;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 94%;
+    margin: 1rem auto;
+  }
+
+  form,
+  .confirmation {
+    padding: 1rem;
+  }
+
+  .rating-options {
+    gap: 0.1rem;
+  }
+
+  .rating-option .star {
+    font-size: 1.35rem;
+  }
+}

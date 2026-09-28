@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product review confirmation">
+  <title>Review Submitted</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/review.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Review Submitted</h1>
+  </header>
+
+  <main>
+    <section class="confirmation" aria-labelledby="confirmationTitle">
+      <h2 id="confirmationTitle">Thank you for your review!</h2>
+      <p>Your review has been successfully submitted.</p>
+
+      <div class="review-count">
+        <strong>Total Reviews Completed:</strong>
+        <span id="reviewCount">0</span>
+      </div>
+
+      <a class="back-link" href="form.html">Submit another review</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Victor Santos | Paraíba, Brazil</p>
+    <p>Product Review Form</p>
+  </footer>
+</body>
+</html>
